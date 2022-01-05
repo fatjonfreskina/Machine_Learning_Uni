@@ -40,12 +40,20 @@ print()
 #############################
 #LET'S DO IT WITH NUYMPY
 
+inputs = [1.2, 5.1, 2.1]
+weights = [[1, 2, 3],
+		[1, 2, 2],
+		[5, 4, 3]] # This is a matrix -> a LAYER , each row is a neuron with its weights
+bias = [2,3,4]
+
+#Output1 = inputs * weights[0] + bias[0] = 1.2*1 + 5.1*2 + 2.1*3 + 2
+
 inputs = np.array(inputs)
 weights = np.array(weights)
 bias = np.array(bias)
 
-print(inputs.shape, weights.shape, bias.shape)
+print("Shapes: ", inputs.shape, weights.shape, bias.shape)
 
 result = np.dot(weights,inputs) + bias
 
-print(result)
+print("Outputs of the layer: ", result)
